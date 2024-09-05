@@ -1,0 +1,12 @@
+/* Layout.css */
+.form-layout {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-content {
+    flex-grow: 1;
+    margin-right: 220px; /* Adjust according to tracker width */
+    
+  }
+  

@@ -1,0 +1,56 @@
+.form-stepper-container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start (left side) */
+  padding: 20px;
+  gap: 20px; /* Add space between the form and sidebar */
+  
+}
+
+.form-stepper {
+  width: 70%; /* Increased width to accommodate the form on the left */
+  padding: 20px;
+  background: #ffffff; /* Clean white background */
+  border-radius: 15px; /* More rounded corners for a modern look */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensure child elements don't overflow */
+  
+}
+
+.update-sidebar {
+  width: 30%; /* Keep the sidebar width as is */
+  padding: 20px;
+  background: #f4f4f4; /* Slightly lighter background for contrast */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  
+}
+
+.update-sidebar h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50; /* Darker color for better readability */
+  font-size: 1.4em; /* Slightly larger font size for the heading */
+  font-weight: 600; /* Bold font weight */
+  
+}
+
+.update-step {
+  padding: 15px; /* Increased padding for a more spacious look */
+  margin-bottom: 15px; /* Increased margin between steps */
+  background: #e0e0e0; /* Light gray background */
+  border-radius: 10px; /* Rounded corners for a modern touch */
+  font-weight: 500; /* Medium font weight */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.update-step.completed {
+  background: linear-gradient(135deg, #4caf50 0%, #81c784 100%); /* Green gradient for completed steps */
+  color: white; /* White text color */
+  transform: scale(1.05); /* Slightly enlarge completed items */
+}
+
+.update-step:hover {
+  background: linear-gradient(135deg, #d0d0d0 0%, #b0b0b0 100%); /* Slightly darker gradient on hover */
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}

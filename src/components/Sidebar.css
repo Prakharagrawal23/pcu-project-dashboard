@@ -1,0 +1,101 @@
+/* Import Font Awesome for Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+.sidebar {
+  width: 260px;
+  background-color: #141414; /* Darker background for sidebar */
+  padding: 10px;
+  border-right: 1px solid #222; /* Even darker border for better contrast */
+  position: fixed;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: transform 0.3s ease-out;
+  transform: translateX(-260px); /* Initially hidden */
+  animation: slideIn 0.5s forwards ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-260px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 40px;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #b0b0b0; /* Darker text color for better visibility */
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.sidebar a:hover {
+  background-color: rgb(102, 92, 242); /* Neon blue background on hover */
+  color: #141414; /* Darker text color for contrast on hover */
+  transform: translateX(10px);
+}
+
+.sidebar a:active {
+  transform: scale(0.95);
+}
+
+.sidebar a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  width: 5px;
+  background-color: rgb(239, 22, 22); /* Neon red indicator */
+  border-radius: 0 3px 3px 0;
+  transition: background-color 0.3s ease;
+} 
+
+.sidebar a:hover::before {
+  background-color: rgb(99, 255, 75); /* Neon green indicator on hover */
+}
+
+/* Optional: Add some neon glow effect for the entire sidebar */
+.sidebar {
+  box-shadow: 0 0 10px rgba(47, 0, 255, 0.96); /* Neon cyan glow */
+}
+
+/* Icon styling */
+.sidebar i {
+  font-size: 1.3em;
+  margin-right: 10px;
+}
+
+/* Specific Icons for each sidebar item */
+#sender-icon::before {
+  content: "\f0c0"; /* Font Awesome user icon for Sender Form */
+}
+
+#receiver-icon::before {
+  content: "\f007"; /* Font Awesome user-circle icon for Receiver Form */
+}
+
+#shipment-icon::before {
+  content: "\f0d1"; /* Font Awesome shipping-fast icon for Shipment Form */
+}
+
+#track-id-icon::before {
+  content: "\f0f3"; /* Font Awesome barcode icon for Track ID Form */
+}
